@@ -1,13 +1,264 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+    --primary: #A5C882;
+    --secondary: #D33F49;
+    --light: #ye;
+    --dark: #000;
+    --diabled: #e7e7e7;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    height: 100vh;
+    background-color: #F08080;
+}
+
+*:first-letter {
+    text-transform: capitalize;
+}
+
+.roundBorder {
+    border-radius: 5px;
+}
+
+.list {
+    margin: 25px auto;
+    padding: 25px;
+    background-color: var(--light);
+    width: 100%;
+    max-width: 350px;
+}
+
+.date {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.dateRight {
+    display: flex;
+    align-items: center;
+}
+
+#dateNumber {
+    font-size: 50px;
+}
+
+#dateText {
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+#dateMonth,
+#dateNumber,
+#dateText  {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+     font-size: 6vw;
+
+}
+
+#dateMonth,
+#dateYear {
+    margin-left: 7px;
+}
+
+#dateText  {
+    font-size: 4vw;
+    margin: 0px 20px;
+
+}
+
+form {
+    margin: 20px 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: auto 35px auto;
+    grid-column-gap: 15px;
+    display: flex;
+    align-items: center;
+
+}
+
+input {
+    border: none;
+    padding-left: 10px;
+    background-color: var(--diabled);
+    width: 50%;
+    height: 3vw;
+}
+
+input:focus {
+    outline: none;
+}
+button {
+  width: 50%;
+}
+
+.addTaskButton,
+.orderButton {
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    height: 3vw;
+}
+s
+.addTaskButton {
+    width: 200%;
+    height: 35px;
+    border-radius: 10%;
+    font-size: 18px;
+    background-color: var(--diabled);
+
+}
+
+.orderButton {
+    background-color: var(--secondary);
+    color: var(--light);
+}
+
+.task {
+    background-color: var(--primary);
+    padding: 15px;
+    margin-top: 15px;
+    color: var(--light);
+    cursor: pointer;
+}
+
+.done {
+    background-color: var(--diabled);
+    text-decoration: line-through;
+    color: var(--dark);
+}
+.text02 p {
+  font-size: 4vw;
+    width: 100%;
+    color: white;
+}
+
+
+.redes a {
+    color: #936f6f;
+    background: linear-gradient(145deg, #F08080, #C87070);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 10px;
+    margin: 10px;
+    box-shadow: 11.41px 11.41px 24px #F08080, -11.41px -11.41px 24px #C87070;
+    
+}
+
+.i1:hover {
+  transform: scale(1.5);
+  transition: all 1s;
+}
+.i2:hover {
+  transform: scale(1.5);
+  transition: all 1s;
+}
+.i3:hover {
+  transform: scale(1.5);
+  transition: all 1s;
+}
+.i4:hover {
+  transform: scale(1.5);
+  transition: all 1s;
+}
+
+
+
+.final01 {
+  opacity: 40%;
+}
+.final02 {
+  opacity: 40%;
+}
+
+
+
+nav {
+  padding: 5px 20px;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  color: #C87070;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.menu {
+  display: flex;
+  margin-left: -3vw;
+
+}
+.item1:hover {
+  transform: scale(1.2);
+  transition: all 0.5s;
+}
+
+.item2:hover {
+  transform: scale(1.2);
+  transition: all 0.5s;
+}
+
+.menu {
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-top: -10%;
+    width: 500%
+  }
+
+  to {
+    margin-top: 0%;
+    width: 100%;
+  }
+}
+
+
+
+.item {
+  order: 3;
+  display: block;
+  width: auto;
+}
+
+.menu li {
+  padding: 15px 10px;
+  font-size: 2vw;
+}
+
+@media all and (max-width: 1000px) {
+
+
+.menu li{
+  font-size: 4vw;
+
+}
+.menu {
+  margin-left: -15vw;
+  
+}
+
+
+input {
+
+    height: 7vw;
+}
+.addTaskButton,
+.orderButton {
+
+    height: 7vw;
+}
 }
